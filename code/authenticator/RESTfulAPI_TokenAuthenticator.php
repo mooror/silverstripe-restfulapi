@@ -2,12 +2,12 @@
 /**
  * RESTfulAPI Token authenticator
  * handles login, logout and request authentication via token
- * 
+ *
  * @author  Thierry Francois @colymba thierry@colymba.com
  * @copyright Copyright (c) 2013, Thierry Francois
- * 
+ *
  * @license http://opensource.org/licenses/BSD-3-Clause BSD Simplified
- * 
+ *
  * @package RESTfulAPI
  * @subpackage Authentication
  */
@@ -16,7 +16,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
     /**
    * Authentication token life in seconds
-   * 
+   *
    * @var integer
    * @config
    */
@@ -25,7 +25,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
   /**
    * HTTP Header name storing authentication token
-   * 
+   *
    * @var string
    * @config
    */
@@ -34,7 +34,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
   /**
    * Fallback GET/POST HTTP query var storing authentication token
-   * 
+   *
    * @var string
    * @config
    */
@@ -43,7 +43,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
   /**
    * Class name to query for token validation
-   * 
+   *
    * @var string
    * @config
    */
@@ -64,7 +64,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
   /**
    * Stores current token authentication configurations
    * header, var, class, db columns....
-   * 
+   *
    * @var array
    */
   protected $tokenConfig;
@@ -74,11 +74,13 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
     const AUTH_CODE_LOGIN_FAIL    = 1;
     const AUTH_CODE_TOKEN_INVALID = 2;
     const AUTH_CODE_TOKEN_EXPIRED = 3;
+    const AUTH_CODE_LOGOUT_FAIL   = 4;
+    const AUTH_CODE_LOGOUT_SUCCESS   = 5;
 
 
   /**
    * List of URL accessible actions
-   * 
+   *
    * @var array
    */
   private static $allowed_actions = array(
@@ -137,7 +139,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
           $email    = $request->requestVar('email');
           $pwd      = $request->requestVar('pwd');
           $member   = false;
-      
+
 
           if ($email && $pwd) {
               $member = MemberAuthenticator::authenticate(array(
@@ -156,7 +158,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
                   $member->login();
               }
           }
-      
+
           if (!$member) {
               $response['result']  = false;
               $response['message'] = 'Authentication fail.';
@@ -179,37 +181,64 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
    * Logout a user from framework
    * and update token with an expired one
    * if token owner class is a Member
-   * 
+   *
    * @param  SS_HTTPRequest   $request    HTTP request containing 'email' var
    */
   public function logout(SS_HTTPRequest $request)
   {
+      $response = array();
       $email = $request->requestVar('email');
       $member = Member::get()->filter(array('Email' => $email))->first();
+      $token = $this->getRequestToken($request);
+      if($token){
+        $owner = $this->getOwner($request);
+        if($owner !== NULL){
+          if (is_a($owner, 'Member')) {
+            $ownerEmail = $owner->Email;
+            //if the tokens owner has the same email as the one passed in
+            if($email === $ownerEmail){
+              $member->logout();
+              if ($this->tokenConfig['owner'] === 'Member') {
+                //generate expired token
+                $tokenData = $this->generateToken(true);
+                //write
+                $tokenDBColumn  = $this->tokenConfig['DBColumn'];
+                $expireDBColumn = $this->tokenConfig['expireDBColumn'];
 
-      if ($member) {
-          //logout
-      $member->logout();
-
-          if ($this->tokenConfig['owner'] === 'Member') {
-              //generate expired token
-        $tokenData = $this->generateToken(true);
-
-        //write
-        $tokenDBColumn  = $this->tokenConfig['DBColumn'];
-              $expireDBColumn = $this->tokenConfig['expireDBColumn'];
-
-              $member->{$tokenDBColumn}  = $tokenData['token'];
-              $member->{$expireDBColumn} = $tokenData['expire'];
-              $member->write();
+                $member->{$tokenDBColumn}  = $tokenData['token'];
+                $member->{$expireDBColumn} = $tokenData['expire'];
+                $member->write();
+              }
+              $response['result']  = true;
+              $response['message'] = 'Successfully logged out '. $email;
+              $response['code']    = self::AUTH_CODE_LOGOUT_SUCCESS;
+            }else{
+              $response['result']  = false;
+              $response['message'] = 'The token you passed does not belong to that email'.$ownerEmail .':'.$email;
+              $response['code']    = self::AUTH_CODE_LOGOUT_FAIL;
+            }
+          }else {
+            $response['result']  = false;
+            $response['message'] = 'Token owner is not a Member';
+            $response['code']    = self::AUTH_CODE_LOGOUT_FAIL;
           }
+        }else {
+          $response['result']  = false;
+          $response['message'] = 'Invalid token: has no owner';
+          $response['code']    = self::AUTH_CODE_LOGOUT_FAIL;
+        }
+      } else {
+        $response['result']  = false;
+        $response['message'] = 'No token passed';
+        $response['code']    = self::AUTH_CODE_LOGOUT_FAIL;
       }
+      return $response;
   }
 
 
   /**
    * Sends password recovery email
-   * 
+   *
    * @param  SS_HTTPRequest   $request    HTTP request containing 'email' vars
    * @return array                        'email' => false if email fails (Member doesn't exist will not be reported)
    */
@@ -237,7 +266,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
   /**
    * Return the stored API token for a specific owner
-   * 
+   *
    * @param  integer $id ID of the token owner
    * @return string      API token for the owner
    */
@@ -260,9 +289,38 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
 
   /**
+   * Return the stored API token for a specific Member
+   *
+   * @param  string $email Email of the Member who owns the token
+   * @return string      API token for the Member
+   */
+  public function getMemberToken($email)
+  {
+    if ($email) {
+      if ($this->tokenConfig['owner'] === 'Member') {
+        $safeEmail = Convert::raw2sql($email);
+        $member = DataObject::get_one('Member', "\"Email\" = '{$safeEmail}'");
+        if ($member) {
+          $tokenDBColumn = $this->tokenConfig['DBColumn'];
+          return array(
+            'token'
+          );$member->{$tokenDBColumn};
+        } else {
+          user_error("API Token Member not found with Email = $email", E_USER_WARNING);
+        }
+      }else{
+        user_error("The RESTfulAPI_TokenAuthenticator owner config property isn't set to Member", E_USER_WARNING);
+      }
+    } else {
+        user_error("RESTfulAPI_TokenAuthenticator::getMemberToken() requires an Email as argument.", E_USER_WARNING);
+    }
+  }
+
+
+  /**
    * Reset an owner's token
    * if $expired is set to true the owner's will have a new invalidated/expired token
-   * 
+   *
    * @param  integer $id      ID of the token owner
    * @param  boolean $expired if true the token will be invalidated
    */
@@ -295,7 +353,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
   /**
    * Generates an encrypted random token
    * and an expiry date
-   * 
+   *
    * @param  boolean $expired Set to true to generate an outdated token
    * @return array            token data array('token' => HASH, 'expire' => EXPIRY_DATE)
    */
@@ -308,7 +366,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
       } else {
           $expire = time() - ($life * 2);
       }
-    
+
       $generator = new RandomGenerator();
       $tokenString = $generator->randomToken();
 
@@ -326,42 +384,55 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
   /**
    * Returns the DataObject related to the token
    * that sent the authenticated request
-   * 
+   *
    * @param  SS_HTTPRequest          $request    HTTP API request
    * @return null|DataObject                     null if failed or the DataObject token owner related to the request
    */
   public function getOwner(SS_HTTPRequest $request)
   {
-      $owner = null;
-
+    $owner = null;
     //get the token
-    $token = $request->getHeader($this->tokenConfig['header']);
-      if (!$token) {
-          $token = $request->requestVar($this->tokenConfig['queryVar']);
-      }
-
+    $token = $this->getRequestToken($request);
       if ($token) {
           $SQL_token = Convert::raw2sql($token);
-      
+
           $owner = DataObject::get_one(
         $this->tokenConfig['owner'],
         "\"".$this->tokenConfig['DBColumn']."\"='" . $SQL_token . "'",
         false
       );
-
-          if (!$owner) {
-              $owner = null;
-          }
+        if (!$owner) {
+          $owner = null;
+        }
       }
-
       return $owner;
+  }
+  /**
+   * Returns the token that was passed in the request
+   *
+   * @param  SS_HTTPRequest          $request    HTTP API request
+   * @return false|string            false if no token was found or a string containing the token
+   */
+  public function getRequestToken(SS_HTTPRequest $request)
+  {
+    //get the token
+    $token = $request->getHeader($this->tokenConfig['header']);
+      if (!$token) {
+          $token = $request->requestVar($this->tokenConfig['queryVar']);
+      }
+      if ($token) {
+        $output = $token;
+      }else{
+        $output = false;
+      }
+      return $output;
   }
 
 
   /**
    * Checks if a request to the API is authenticated
    * Gets API Token from HTTP Request and return Auth result
-   * 
+   *
    * @param  SS_HTTPRequest           $request    HTTP API request
    * @return true|RESTfulAPI_Error                True if token is valid OR RESTfulAPI_Error with details
    */
@@ -387,11 +458,11 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
       );
       }
   }
-  
+
 
   /**
    * Validate the API token
-   * 
+   *
    * @param  string                 $token    Authentication token
    * @return true|RESTfulAPI_Error            True if token is valid OR RESTfulAPI_Error with details
    */
@@ -426,7 +497,7 @@ class RESTfulAPI_TokenAuthenticator implements RESTfulAPI_Authenticator
 
               return true;
           } else {
-              //too old        
+              //too old
         return new RESTfulAPI_Error(403,
           'Token expired.',
           array(
