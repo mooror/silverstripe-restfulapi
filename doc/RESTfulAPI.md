@@ -16,7 +16,7 @@ Config | Type | Info | Default
 `dependencies` | `array` | key => value pairs sepcifying the components classes used for the `'authenticator'`, `'queryHandler'` and `'serializer'`  | 'authenticator' => '%$RESTfulAPI_TokenAuthenticator', 'queryHandler' => '%$RESTfulAPI_DefaultQueryHandler', 'serializer' => '%$RESTfulAPI_BasicSerializer'
 `embedded_records` | `array` | key => value pairs sepcifying which relation names to embed in the response and for which model this applies (i.e. 'RequestedClass' => array('RelationNameToEmbed')) | n/a
 - | - | - | -
-`cors` | `array` | Cross-Origin Resource Sharing (CORS) API settings | 
+`cors` | `array` | Cross-Origin Resource Sharing (CORS) API settings |
 `cors.Enabled` | `boolean` | If true the API will add CORS HTTP headers to the response | true
 `cors.Allow-Origin` | `string` or `array` | '\*' allows all, 'http://domain.com' allows a specific domain, array('http://domain.com', 'http://site.com') allows a list of domains | '\*'
 `cors.Allow-Headers` | `string` | '\*' allows all, 'header1, header2' coman separated list allows a list of headers | '\*'
@@ -54,3 +54,9 @@ A sample `Group` extension `RESTfulAPI_GroupExtension` is also available with a 
 By default on the IDs of relations (has_one, has_many...) are returned to the client. To save HTTP request, these relation can be embedded into the payload, this is defined by the `embedded_records` config and used by the serializers.
 
 For more details about embeded records, [see the source comment](../code/RESTfulAPI.php#L106) on the config var.
+
+## Code Overview
+Below is a flow chart that shows a general overview of the code contained inside of the RESTfulAPI.php file.
+
+<a href="charts/RESTfulAPI FlowChart_1.pdf"><img src="charts/RESTfulAPI FlowChart_1.png" width="350"/></a>
+<p>Click for Larger Image Display</p>

@@ -1,0 +1,82 @@
+The below code is for the code2flow (http://www.code2flow.com/#) flow chart generator.
+
+
+
+//Example URL sitelease.ca/StoreProvisioner/api/$MainAction/$Action
+/HTTPRequest (SS_HTTPRequest)/[RESTfulAPI.php];
+||RESTfulAPI (Controller)||;
+\$allowed_actions (Function)/;
+if(Is $MainAction allowed? (If)) {
+  #Router Function
+  \$url_handler (Function)/;
+  switch(Who handles this Request?) {
+    case auth/$Action:
+        \auth() (Function)/;
+        if(Is $Action in the
+        $allowed_actions array
+        within authenticator? AND 
+        Does a method exist for 
+        that action? (If))[RESTfulAPI_Authenticator.php
+]{
+          //Pass data to the action method
+          \$action() (Function)/[RESTfulAPI_Serializer.php
+];
+          //Serialize the authenticator's response
+          \serialize() (Function)/;
+          |Answer|;
+          }
+        else
+          (403 Error: Action not allowed);
+        break;
+    case $className/$ID:
+        \index() (Function)/;
+        if(Authenticator exists AND authentication is enabled)[RESTfulAPI_Authenticator.php]{
+          //Pass data to the authenticate method
+          \authenticate() (Function)/;
+          if(Authenticator returned an error){
+            (Authenticator Error);
+          goto before_Response;
+          }
+        }
+        //Pass data to the handlQuery method
+        \handlQuery() (Function)/;
+        if(QueryHandler returned an error){
+          (QueryHandler Error);
+          goto before_Response;
+        }
+        //Serialize the queryHandler's response
+        \serialize() (Function)/[RESTfulAPI_DefaultQueryHandler.php];
+        if(Serializer returned an error){
+          (Serializer Error);
+          goto before_Response;
+        }
+        else
+          |Answer|;
+        break;
+    case acl/$Action:
+        \acl() (Function)/;
+        if(Is $Action in the
+        $allowed_actions array
+        within authority? AND 
+        Does a method exist for 
+        that action? (If))[RESTfulAPI_DefaultPermissionManager.php]{
+          //Pass data to the action method
+          \$action() (Function)/[RESTfulAPI_Serializer.php
+];
+          //Serialize the authority's response
+          \serialize() (Function)/;
+          |Answer|;
+          }
+        else
+          (403 Error: Action not allowed);
+        break;
+  }
+}
+else
+  (Error);
+before_Response:
+/Return Response/;
+  
+
+
+
