@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI_EmberDataDeSerializer | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_BasicDeSerializer.html">RESTfulAPI_BasicDeSerializer</a></li>
+				<li><a href="class-RESTfulAPI_BasicSerializer.html">RESTfulAPI_BasicSerializer</a></li>
+				<li class="active"><a href="class-RESTfulAPI_EmberDataDeSerializer.html">RESTfulAPI_EmberDataDeSerializer</a></li>
+				<li><a href="class-RESTfulAPI_EmberDataSerializer.html">RESTfulAPI_EmberDataSerializer</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_DeSerializer.html">RESTfulAPI_DeSerializer</a></li>
+				<li><a href="class-RESTfulAPI_Serializer.html">RESTfulAPI_Serializer</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI_EmberDataDeSerializer</h1>
+
+
+	<div class="description">
+	<p>EmberData RESTfulAPI Model DeSerializer
+handles DataObject, DataList etc.. JSON serialization and de-serialization</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>RESTfulAPI_EmberDataDeSerializer</span></b>			
+			 implements 
+				<a href="class-RESTfulAPI_DeSerializer.html"><span>RESTfulAPI_DeSerializer</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a>\<a href="package-RESTfulAPI.Serializer.html">Serializer</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI_EmberDataDeSerializer.html#2-118" title="Go to source code">serializers/EmberData/RESTfulAPI_EmberDataDeSerializer.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="deserialize" id="_deserialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			array|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deserialize">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataDeSerializer.html#17-52" title="Go to source code">deserialize</a>( <span>string <var>$json</var></span> )</code>
+
+		<div class="description short">
+			<p>Convert client JSON data to an array of data
+ready to be consumed by SilverStripe</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Convert client JSON data to an array of data
+ready to be consumed by SilverStripe</p>
+
+<p>Expects payload to be formatted:
+{ "className": { "fieldName": "Field value", "relations": [1] }
+}</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$json</var></dt>
+					<dd>$data   JSON to be converted to data ready to be consumed by SilverStripe</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array|false<br>Formatted array representation of the JSON data or false if failed
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_DeSerializer.html#_deserialize">RESTfulAPI_DeSerializer::deserialize()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unformatPayloadData" id="_unformatPayloadData">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unformatPayloadData">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataDeSerializer.html#55-79" title="Go to source code">unformatPayloadData</a>( <span>array <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Process payload data from client
+and unformats columns/values recursively</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Process payload data from client
+and unformats columns/values recursively</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>Payload data (decoded JSON)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>Paylaod data with all keys/values unformatted
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unformatName" id="_unformatName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unformatName">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataDeSerializer.html#82-101" title="Go to source code">unformatName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Format a ClassName or Field name sent by client API
+to be used by SilverStripe</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Format a ClassName or Field name sent by client API
+to be used by SilverStripe</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>ClassName of Field name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Formatted name
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_DeSerializer.html#_unformatName">RESTfulAPI_DeSerializer::unformatName()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deserializeColumnName" id="_deserializeColumnName">
+
+		<td class="attributes"><code>
+			 private 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deserializeColumnName">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataDeSerializer.html#104-117" title="Go to source code">deserializeColumnName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Format a DB Column name or Field name
+sent from client API to be used by SilverStripe</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Format a DB Column name or Field name
+sent from client API to be used by SilverStripe</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>Field name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Formatted name
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-RESTfulAPI.html">RESTfulAPI</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI</h1>
+
+
+	<div class="description">
+	<p>SilverStripe 3 RESTful API</p>
+
+<p>This module implements a RESTful API
+with flexible configuration for model querying and response serialization
+through independent components.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Controller
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>RESTfulAPI</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI.html#2-576" title="Go to source code">RESTfulAPI.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getqueryHandler" id="_getqueryHandler">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-RESTfulAPI_QueryHandler.html">RESTfulAPI_QueryHandler</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getqueryHandler">#</a>
+		<code><a href="source-class-RESTfulAPI.html#180-188" title="Go to source code">getqueryHandler</a>( )</code>
+
+		<div class="description short">
+			<p>Returns current query handler instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns current query handler instance</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-RESTfulAPI_QueryHandler.html">RESTfulAPI_QueryHandler</a></code><br>QueryHandler instance
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getserializer" id="_getserializer">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-RESTfulAPI_Serializer.html">RESTfulAPI_Serializer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getserializer">#</a>
+		<code><a href="source-class-RESTfulAPI.html#191-199" title="Go to source code">getserializer</a>( )</code>
+
+		<div class="description short">
+			<p>Returns current serializer instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns current serializer instance</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-RESTfulAPI_Serializer.html">RESTfulAPI_Serializer</a></code><br>Serializer instance
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-RESTfulAPI.html#210-219" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			<p>Constructor....</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Constructor....</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="init" id="_init">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_init">#</a>
+		<code><a href="source-class-RESTfulAPI.html#222-236" title="Go to source code">init</a>( )</code>
+
+		<div class="description short">
+			<p>Controller inititalisation
+Catches CORS preflight request marked with HTTPMethod 'OPTIONS'</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Controller inititalisation
+Catches CORS preflight request marked with HTTPMethod 'OPTIONS'</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="auth" id="_auth">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_auth">#</a>
+		<code><a href="source-class-RESTfulAPI.html#239-274" title="Go to source code">auth</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Handles authentications methods
+get response from API Authenticator
+then passes it on to $answer()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles authentications methods
+get response from API Authenticator
+then passes it on to $answer()</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="acl" id="_acl">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_acl">#</a>
+		<code><a href="source-class-RESTfulAPI.html#277-312" title="Go to source code">acl</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Handles Access Control methods
+get response from API PermissionManager
+then passes it on to $answer()</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles Access Control methods
+get response from API PermissionManager
+then passes it on to $answer()</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="index" id="_index">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_index">#</a>
+		<code><a href="source-class-RESTfulAPI.html#315-358" title="Go to source code">index</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Main API hub switch
+All requests pass through here and are redirected depending on HTTP verb and params</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Main API hub switch
+All requests pass through here and are redirected depending on HTTP verb and params</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>json object of the models found
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="answer" id="_answer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_answer">#</a>
+		<code><a href="source-class-RESTfulAPI.html#361-386" title="Go to source code">answer</a>( <span>string <var>$json</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$corsPreflight</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Output the API response to client
+then exit.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Output the API response to client
+then exit.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$json</var></dt>
+					<dd>Response body</dd>
+					<dt><var>$corsPreflight</var></dt>
+					<dd>Set to true if this is a XHR preflight request answer. CORS shoud be enabled.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="error" id="_error">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_error">#</a>
+		<code><a href="source-class-RESTfulAPI.html#389-411" title="Go to source code">error</a>( <span><code><a href="class-RESTfulAPI_Error.html">RESTfulAPI_Error</a></code> <var>$error</var></span> )</code>
+
+		<div class="description short">
+			<p>Handles formatting and output error message
+then exit.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Handles formatting and output error message
+then exit.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$error</var></dt>
+					<dd>Error object to return</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setAnswerCORS" id="_setAnswerCORS">
+
+		<td class="attributes"><code>
+			 private 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setAnswerCORS">#</a>
+		<code><a href="source-class-RESTfulAPI.html#414-460" title="Go to source code">setAnswerCORS</a>( <span>SS_HTTPResponse <var>$answer</var></span> )</code>
+
+		<div class="description short">
+			<p>Apply the proper CORS response heardes
+to an SS_HTTPResponse</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Apply the proper CORS response heardes
+to an SS_HTTPResponse</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$answer</var></dt>
+					<dd>The updated response if CORS are neabled</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="api_access_control" id="_api_access_control">
+
+		<td class="attributes"><code>
+			 public static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_api_access_control">#</a>
+		<code><a href="source-class-RESTfulAPI.html#463-507" title="Go to source code">api_access_control</a>( <span>string|DataObject <var>$model</var></span>, <span>string <var>$httpMethod</var> = <span class="php-quote">'GET'</span></span> )</code>
+
+		<div class="description short">
+			<p>Checks a class or model api access
+depending on access_control_policy and the provided model.
+- 1st config check
+- 2nd permission check if config access passes</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks a class or model api access
+depending on access_control_policy and the provided model.
+- 1st config check
+- 2nd permission check if config access passes</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd>Model's classname or DataObject</dd>
+					<dt><var>$httpMethod</var></dt>
+					<dd>API request HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if access is granted, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="api_access_config_check" id="_api_access_config_check">
+
+		<td class="attributes"><code>
+			 private static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_api_access_config_check">#</a>
+		<code><a href="source-class-RESTfulAPI.html#509-537" title="Go to source code">api_access_config_check</a>( <span>string <var>$className</var></span>, <span>string <var>$httpMethod</var> = <span class="php-quote">'GET'</span></span> )</code>
+
+		<div class="description short">
+			<p>Checks a model's api_access config.
+api_access config can be:
+- unset|false, access is always denied
+- true, access is always granted
+- comma separated list of allowed HTTP methods</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks a model's api_access config.
+api_access config can be:
+- unset|false, access is always denied
+- true, access is always granted
+- comma separated list of allowed HTTP methods</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$className</var></dt>
+					<dd>Model's classname</dd>
+					<dt><var>$httpMethod</var></dt>
+					<dd>API request HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if access is granted, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="model_permission_check" id="_model_permission_check">
+
+		<td class="attributes"><code>
+			 private static
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_model_permission_check">#</a>
+		<code><a href="source-class-RESTfulAPI.html#539-575" title="Go to source code">model_permission_check</a>( <span>string|DataObject <var>$model</var></span>, <span>string <var>$httpMethod</var> = <span class="php-quote">'GET'</span></span> )</code>
+
+		<div class="description short">
+			<p>Checks a Model's permission for the currently
+authenticated user via the Permission Manager dependency.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks a Model's permission for the currently
+authenticated user via the Permission Manager dependency.</p>
+
+<p>For permissions to actually be checked, this means the RESTfulAPI
+must have both authenticator and authority dependencies defined.</p>
+
+<p>If the authenticator component does not return an instance of the Member
+null will be passed to the authority component.</p>
+
+<p>This default to true.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd>Model's classname or DataObject to check permission for</dd>
+					<dt><var>$httpMethod</var></dt>
+					<dd>API request HTTP method</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>true if access is granted, false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ACL_CHECK_CONFIG_ONLY" id="ACL_CHECK_CONFIG_ONLY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI.html#31" title="Go to source code"><b>ACL_CHECK_CONFIG_ONLY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ACL_CHECK_CONFIG_ONLY" class="anchor">#</a>
+				<code><span class="php-quote">'config'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ACL_CHECK_MODEL_ONLY" id="ACL_CHECK_MODEL_ONLY">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI.html#32" title="Go to source code"><b>ACL_CHECK_MODEL_ONLY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ACL_CHECK_MODEL_ONLY" class="anchor">#</a>
+				<code><span class="php-quote">'model'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ACL_CHECK_CONFIG_AND_MODEL" id="ACL_CHECK_CONFIG_AND_MODEL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI.html#33" title="Go to source code"><b>ACL_CHECK_CONFIG_AND_MODEL</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ACL_CHECK_CONFIG_AND_MODEL" class="anchor">#</a>
+				<code><span class="php-quote">'both'</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="authentication_policy" id="$authentication_policy">
+		<td class="attributes"><code>
+			private static 
+			boolean|array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#19-28" title="Go to source code"><var>$authentication_policy</var></a>
+
+			<div class="description short">
+				<p>Lets you select if the API requires authentication for access
+false = no authentication required
+true  = authentication required for all HTTP methods
+array = authentication required for selected HTTP methods e.g. array('POST', 'PUT', 'DELETE')</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Lets you select if the API requires authentication for access
+false = no authentication required
+true  = authentication required for all HTTP methods
+array = authentication required for selected HTTP methods e.g. array('POST', 'PUT', 'DELETE')</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$authentication_policy" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="access_control_policy" id="$access_control_policy">
+		<td class="attributes"><code>
+			private static 
+			boolean|string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#36-49" title="Go to source code"><var>$access_control_policy</var></a>
+
+			<div class="description short">
+				<p>Lets you select if the API will perform access control checks.
+false, no ACL required (everything is accessible to anyone)
+string, 1 of the 3 ACL policy constants:
+- 'ACL_CHECK_CONFIG_ONLY'      : Check against class api_access config only
+- 'ACL_CHECK_MODEL_ONLY'       : Check against DataObject permissions (canView... etc.)
+- 'ACL_CHECK_CONFIG_AND_MODEL' : Check against both api_access and DataObject permissions</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Lets you select if the API will perform access control checks.
+false, no ACL required (everything is accessible to anyone)
+string, 1 of the 3 ACL policy constants:
+- 'ACL_CHECK_CONFIG_ONLY'      : Check against class api_access config only
+- 'ACL_CHECK_MODEL_ONLY'       : Check against DataObject permissions (canView... etc.)
+- 'ACL_CHECK_CONFIG_AND_MODEL' : Check against both api_access and DataObject permissions</p>
+
+<p>Default to check config only.</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$access_control_policy" class="anchor">#</a>
+				<code><span class="php-quote">'ACL_CHECK_CONFIG_ONLY'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="authenticator" id="$authenticator">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-RESTfulAPI_Authenticator.html">RESTfulAPI_Authenticator</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#52-57" title="Go to source code"><var>$authenticator</var></a>
+
+			<div class="description short">
+				<p>Current Authenticator instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current Authenticator instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$authenticator" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="authority" id="$authority">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-RESTfulAPI_PermissionManager.html">RESTfulAPI_PermissionManager</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#60-65" title="Go to source code"><var>$authority</var></a>
+
+			<div class="description short">
+				<p>Current Permission Manager instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current Permission Manager instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$authority" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="queryHandler" id="$queryHandler">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-RESTfulAPI_QueryHandler.html">RESTfulAPI_QueryHandler</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#68-73" title="Go to source code"><var>$queryHandler</var></a>
+
+			<div class="description short">
+				<p>Current QueryHandler instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current QueryHandler instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$queryHandler" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="serializer" id="$serializer">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-RESTfulAPI_Serializer.html">RESTfulAPI_Serializer</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#76-81" title="Go to source code"><var>$serializer</var></a>
+
+			<div class="description short">
+				<p>Current serializer instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current serializer instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$serializer" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="dependencies" id="$dependencies">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#84-96" title="Go to source code"><var>$dependencies</var></a>
+
+			<div class="description short">
+				<p>Injector dependencies
+Override in configuration to use your custom classes</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injector dependencies
+Override in configuration to use your custom classes</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$dependencies" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'authenticator'</span> =&gt; <span class="php-quote">'%$RESTfulAPI_TokenAuthenticator'</span>,
+<span class="php-quote">'authority'</span>     =&gt; <span class="php-quote">'%$RESTfulAPI_DefaultPermissionManager'</span>,
+<span class="php-quote">'queryHandler'</span>  =&gt; <span class="php-quote">'%$RESTfulAPI_DefaultQueryHandler'</span>,
+<span class="php-quote">'serializer'</span>    =&gt; <span class="php-quote">'%$RESTfulAPI_BasicSerializer'</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="embedded_records" id="$embedded_records">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#99-131" title="Go to source code"><var>$embedded_records</var></a>
+
+			<div class="description short">
+				<p>Embedded records setting
+Specify which relation ($has_one, $has_many, $many_many) model data should be embedded into the response</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Embedded records setting
+Specify which relation ($has_one, $has_many, $many_many) model data should be embedded into the response</p>
+
+<p>Map of relations to embed for specific record classname
+'RequestedClass' => array('RelationNameToEmbed', 'Another')</p>
+
+<p>Non embedded response:
+{ 'member': { 'name': 'John', 'favourites': [1, 2] }
+}</p>
+
+<p>Response with embedded record:
+{ 'member': { 'name': 'John', 'favourites': [{ 'id': 1, 'name': 'Mark' },{ 'id': 2, 'name': 'Maggie' }] }
+}</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$embedded_records" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="cors" id="$cors">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#134-153" title="Go to source code"><var>$cors</var></a>
+
+			<div class="description short">
+				<p>Cross-Origin Resource Sharing (CORS)
+API settings for cross domain XMLHTTPRequest</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Cross-Origin Resource Sharing (CORS)
+API settings for cross domain XMLHTTPRequest</p>
+
+<p>Enabled        true|false      enable/disable CORS
+Allow-Origin   String|Array    '<em>' to allow all, 'http://domain.com' to allow single domain, array('http://domain.com', 'http://site.com') to allow multiple domains
+Allow-Headers  String          '</em>' to allow all or comma separated list of headers
+Allow-Methods  String          comma separated list of allowed methods
+Max-Age        Integer         Preflight/OPTIONS request caching time in seconds (NOTE has no effect if Authentification is enabled => custom header = always preflight)</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$cors" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'Enabled'</span>       =&gt; <span class="php-keyword1">true</span>,
+<span class="php-quote">'Allow-Origin'</span>  =&gt; <span class="php-quote">'*'</span>,
+<span class="php-quote">'Allow-Headers'</span> =&gt; <span class="php-quote">'*'</span>,
+<span class="php-quote">'Allow-Methods'</span> =&gt; <span class="php-quote">'OPTIONS, POST, GET, PUT, DELETE'</span>,
+<span class="php-quote">'Max-Age'</span>       =&gt; <span class="php-num">86400</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="allowed_actions" id="$allowed_actions">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#156-165" title="Go to source code"><var>$allowed_actions</var></a>
+
+			<div class="description short">
+				<p>URL handler allowed actions</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>URL handler allowed actions</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$allowed_actions" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'index'</span>,
+<span class="php-quote">'auth'</span>,
+<span class="php-quote">'acl'</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="url_handlers" id="$url_handlers">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#168-177" title="Go to source code"><var>$url_handlers</var></a>
+
+			<div class="description short">
+				<p>URL handler definition</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>URL handler definition</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$url_handlers" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'auth/$Action'</span>   =&gt; <span class="php-quote">'auth'</span>,
+<span class="php-quote">'acl/$Action'</span>    =&gt; <span class="php-quote">'acl'</span>,
+<span class="php-quote">'$ClassName/$ID'</span> =&gt; <span class="php-quote">'index'</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="instance" id="$instance">
+		<td class="attributes"><code>
+			protected static 
+			<code><a href="class-RESTfulAPI.html">RESTfulAPI</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI.html#202-207" title="Go to source code"><var>$instance</var></a>
+
+			<div class="description short">
+				<p>Current RESTfulAPI instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current RESTfulAPI instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$instance" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

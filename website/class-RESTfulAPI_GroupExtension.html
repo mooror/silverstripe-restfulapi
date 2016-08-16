@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI_GroupExtension | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_DefaultPermissionManager.html">RESTfulAPI_DefaultPermissionManager</a></li>
+				<li class="active"><a href="class-RESTfulAPI_GroupExtension.html">RESTfulAPI_GroupExtension</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_PermissionManager.html">RESTfulAPI_PermissionManager</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI_GroupExtension</h1>
+
+
+	<div class="description">
+	<p>Group extension used to create the defaults API Groups
+- API Admin   => ALL ACCESS
+- API Editor  => VIEW + EDIT + CREATE
+- API Reader  => VIEW</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+DataExtension
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>RESTfulAPI_GroupExtension</span></b>			
+			 implements 
+<span>PermissionProvider</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a>\<a href="package-RESTfulAPI.Permission.html">Permission</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI_GroupExtension.html#2-103" title="Go to source code">permissionManager/RESTfulAPI_GroupExtension.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="providePermissions" id="_providePermissions">
+
+		<td class="attributes"><code>
+			 public 
+
+			Array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_providePermissions">#</a>
+		<code><a href="source-class-RESTfulAPI_GroupExtension.html#18-47" title="Go to source code">providePermissions</a>( )</code>
+
+		<div class="description short">
+			<p>Basic RESTfulAPI Permission set</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Basic RESTfulAPI Permission set</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					Array<br>Default API permission set
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="requireDefaultRecords" id="_requireDefaultRecords">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_requireDefaultRecords">#</a>
+		<code><a href="source-class-RESTfulAPI_GroupExtension.html#50-102" title="Go to source code">requireDefaultRecords</a>( )</code>
+
+		<div class="description short">
+			<p>Create the default Groups
+and add default admin to admin group</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create the default Groups
+and add default admin to admin group</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI_DefaultQueryHandler | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-RESTfulAPI_DefaultQueryHandler.html">RESTfulAPI_DefaultQueryHandler</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_QueryHandler.html">RESTfulAPI_QueryHandler</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI_DefaultQueryHandler</h1>
+
+
+	<div class="description">
+	<p>Default RESTfulAPI Query handler
+handles models request etc...</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>RESTfulAPI_DefaultQueryHandler</span></b>			
+			 implements 
+				<a href="class-RESTfulAPI_QueryHandler.html"><span>RESTfulAPI_QueryHandler</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a>\<a href="package-RESTfulAPI.QueryHandler.html">QueryHandler</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI_DefaultQueryHandler.html#2-492" title="Go to source code">queryHandlers/RESTfulAPI_DefaultQueryHandler.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getdeSerializer" id="_getdeSerializer">
+
+		<td class="attributes"><code>
+			 public 
+
+			<code><a href="class-RESTfulAPI_DeSerializer.html">RESTfulAPI_DeSerializer</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getdeSerializer">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#80-88" title="Go to source code">getdeSerializer</a>( )</code>
+
+		<div class="description short">
+			<p>Return current RESTfulAPI DeSerializer instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return current RESTfulAPI DeSerializer instance</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-RESTfulAPI_DeSerializer.html">RESTfulAPI_DeSerializer</a></code><br>DeSerializer instance
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_QueryHandler.html#_getdeSerializer">RESTfulAPI_QueryHandler::getdeSerializer()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="handleQuery" id="_handleQuery">
+
+		<td class="attributes"><code>
+			 public 
+
+			DataObjec|DataList
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_handleQuery">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#91-168" title="Go to source code">handleQuery</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>All requests pass through here and are redirected depending on HTTP verb and params</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>All requests pass through here and are redirected depending on HTTP verb and params</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					DataObjec|DataList<br>DataObject/DataList result or stdClass on error
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_QueryHandler.html#_handleQuery">RESTfulAPI_QueryHandler::handleQuery()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseQueryParameters" id="_parseQueryParameters">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseQueryParameters">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#171-216" title="Go to source code">parseQueryParameters</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			<p>Parse the query parameters to appropriate Column, Value, Search Filter Modifiers
+array(
+  array(
+    'Column'   => ColumnName,
+    'Value'    => ColumnValue,
+    'Modifier' => ModifierType
+  )
+)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Parse the query parameters to appropriate Column, Value, Search Filter Modifiers
+array( array( 'Column'   => ColumnName, 'Value'    => ColumnValue, 'Modifier' => ModifierType )
+)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>raw GET vars array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>formatted query parameters
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findModel" id="_findModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			DataObject|DataList
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findModel">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#219-307" title="Go to source code">findModel</a>( <span>string <var>$model</var></span>, <span>boolean|integr <var>$id</var></span>, <span>array <var>$queryParams</var></span>, <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Finds 1 or more objects of class $model</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Finds 1 or more objects of class $model</p>
+
+<p>Handles column modifiers: :StartsWith, :EndsWith,
+:PartialMatch, :GreaterThan, :LessThan, :Negation
+and query modifiers: sort, rand, limit</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd>Model(s) class to find</dd>
+					<dt><var>$id</var></dt>
+					<dd>The ID of the model to find or false</dd>
+					<dt><var>$queryParams</var></dt>
+					<dd>Query parameters and modifiers</dd>
+					<dt><var>$request</var></dt>
+					<dd>The original HTTP request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					DataObject|DataList<br>Result of the search (note: DataList can be empty)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createModel" id="_createModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			DataObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createModel">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#310-328" title="Go to source code">createModel</a>( <span>string <var>$model</var></span>, <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Create object of class $model</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create object of class $model</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd></dd>
+					<dt><var>$request</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					DataObject
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateModel" id="_updateModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			DataObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateModel">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#331-452" title="Go to source code">updateModel</a>( <span>String|DataObject <var>$model</var></span>, <span>Integer <var>$id</var></span>, <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Update databse record or $model</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Update databse record or $model</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd>the model or class to update</dd>
+					<dt><var>$id</var></dt>
+					<dd>The ID of the model to update</dd>
+					<dt><var>$request</var></dt>
+					<dd>original request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					DataObject<br>The updated model
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteModel" id="_deleteModel">
+
+		<td class="attributes"><code>
+			 public 
+
+			null|array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteModel">#</a>
+		<code><a href="source-class-RESTfulAPI_DefaultQueryHandler.html#455-491" title="Go to source code">deleteModel</a>( <span>string <var>$model</var></span>, <span>integer <var>$id</var></span>, <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete object of Class $model and ID $id</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete object of Class $model and ID $id</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$model</var></dt>
+					<dd>Model class</dd>
+					<dt><var>$id</var></dt>
+					<dd>Model ID</dd>
+					<dt><var>$request</var></dt>
+					<dd>Model ID</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null|array<br>NULL if successful or array with error detail
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="deSerializer" id="$deSerializer">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-RESTfulAPI_DeSerializer.html">RESTfulAPI_DeSerializer</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#17-22" title="Go to source code"><var>$deSerializer</var></a>
+
+			<div class="description short">
+				<p>Current deSerializer instance</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Current deSerializer instance</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$deSerializer" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="dependencies" id="$dependencies">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#25-34" title="Go to source code"><var>$dependencies</var></a>
+
+			<div class="description short">
+				<p>Injector dependencies
+Override in configuration to use your custom classes</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Injector dependencies
+Override in configuration to use your custom classes</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$dependencies" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'deSerializer'</span> =&gt; <span class="php-quote">'%$RESTfulAPI_BasicDeSerializer'</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="searchFilterModifiersSeparator" id="$searchFilterModifiersSeparator">
+		<td class="attributes"><code>
+			private static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#37-44" title="Go to source code"><var>$searchFilterModifiersSeparator</var></a>
+
+			<div class="description short">
+				<p>Search Filter Modifiers Separator used in the query var
+i.e. ?column__EndsWith=value</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search Filter Modifiers Separator used in the query var
+i.e. ?column__EndsWith=value</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$searchFilterModifiersSeparator" class="anchor">#</a>
+				<code><span class="php-quote">'__'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="skipedQueryParameters" id="$skipedQueryParameters">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#47-53" title="Go to source code"><var>$skipedQueryParameters</var></a>
+
+			<div class="description short">
+				<p>Query vars to skip (uppercased)</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Query vars to skip (uppercased)</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$skipedQueryParameters" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(<span class="php-quote">'URL'</span>, <span class="php-quote">'FLUSH'</span>, <span class="php-quote">'FLUSHTOKEN'</span>)</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="max_records_limit" id="$max_records_limit">
+		<td class="attributes"><code>
+			private static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#56-65" title="Go to source code"><var>$max_records_limit</var></a>
+
+			<div class="description short">
+				<p>Set a maximum numbers of records returned by the API.
+Only affectects "GET All". Useful to avoid returning millions of records at once.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Set a maximum numbers of records returned by the API.
+Only affectects "GET All". Useful to avoid returning millions of records at once.</p>
+
+<p>Set to -1 to disable.</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$max_records_limit" class="anchor">#</a>
+				<code><span class="php-num">100</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="requestedData" id="$requestedData">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_DefaultQueryHandler.html#68-77" title="Go to source code"><var>$requestedData</var></a>
+
+			<div class="description short">
+				<p>Stores the currently requested data</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Stores the currently requested data</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$requestedData" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'model'</span>  =&gt; <span class="php-keyword1">null</span>,
+<span class="php-quote">'id'</span>     =&gt; <span class="php-keyword1">null</span>,
+<span class="php-quote">'params'</span> =&gt; <span class="php-keyword1">null</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

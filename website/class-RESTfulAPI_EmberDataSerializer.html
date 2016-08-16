@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI_EmberDataSerializer | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_BasicDeSerializer.html">RESTfulAPI_BasicDeSerializer</a></li>
+				<li><a href="class-RESTfulAPI_BasicSerializer.html">RESTfulAPI_BasicSerializer</a></li>
+				<li><a href="class-RESTfulAPI_EmberDataDeSerializer.html">RESTfulAPI_EmberDataDeSerializer</a></li>
+				<li class="active"><a href="class-RESTfulAPI_EmberDataSerializer.html">RESTfulAPI_EmberDataSerializer</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_DeSerializer.html">RESTfulAPI_DeSerializer</a></li>
+				<li><a href="class-RESTfulAPI_Serializer.html">RESTfulAPI_Serializer</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI_EmberDataSerializer</h1>
+
+
+	<div class="description">
+	<p>EmberData RESTfulAPI Model Serializer
+handles DataObject, DataList etc.. JSON serialization and de-serialization</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-RESTfulAPI_BasicSerializer.html"><span>RESTfulAPI_BasicSerializer</span></a>
+			
+			 implements 
+				<a href="class-RESTfulAPI_Serializer.html"><span>RESTfulAPI_Serializer</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>RESTfulAPI_EmberDataSerializer</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a>\<a href="package-RESTfulAPI.Serializer.html">Serializer</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI_EmberDataSerializer.html#2-294" title="Go to source code">serializers/EmberData/RESTfulAPI_EmberDataSerializer.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#72-85" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			<p>Construct and set current config</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Construct and set current config</p>
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_BasicSerializer.html#___construct">RESTfulAPI_BasicSerializer::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serialize" id="_serialize">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serialize">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#88-130" title="Go to source code">serialize</a>( <span>DataObject|DataList <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Convert raw data (DataObject or DataList) to JSON
+ready to be consumed by the client API</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Convert raw data (DataObject or DataList) to JSON
+ready to be consumed by the client API</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>Data to serialize</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>JSON representation of data
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_BasicSerializer.html#_serialize">RESTfulAPI_BasicSerializer::serialize()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="formatName" id="_formatName">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_formatName">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#133-151" title="Go to source code">formatName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Format a SilverStripe ClassName or Field name
+to be used by the client API</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Format a SilverStripe ClassName or Field name
+to be used by the client API</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>ClassName of DBField name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Formatted name
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_BasicSerializer.html#_formatName">RESTfulAPI_BasicSerializer::formatName()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serializeColumnName" id="_serializeColumnName">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serializeColumnName">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#154-170" title="Go to source code">serializeColumnName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Format a DB Column name or Field name
+to be used by the client API</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Format a DB Column name or Field name
+to be used by the client API</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>Field name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Formatted name
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_BasicSerializer.html#_serializeColumnName">RESTfulAPI_BasicSerializer::serializeColumnName()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hasSideloadedRecords" id="_hasSideloadedRecords">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hasSideloadedRecords">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#173-182" title="Go to source code">hasSideloadedRecords</a>( <span>string <var>$classname</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if a specific class requires data to be sideloaded.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if a specific class requires data to be sideloaded.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$classname</var></dt>
+					<dd>Requested data classname</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if some relations should be sideloaded
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSideloadData" id="_getSideloadData">
+
+		<td class="attributes"><code>
+			 protected 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSideloadData">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#185-260" title="Go to source code">getSideloadData</a>( <span>DataObject|DataList <var>$dataSource</var></span> )</code>
+
+		<div class="description short">
+			<p>Fetches and return all the data that need to be sideloaded
+for a specific source DataObject or DataList.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Fetches and return all the data that need to be sideloaded
+for a specific source DataObject or DataList.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$dataSource</var></dt>
+					<dd>The source data to fetch sideloaded records for</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>A map of relation names with their data
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insertSideloadData" id="_insertSideloadData">
+
+		<td class="attributes"><code>
+			 protected 
+
+			stdClass
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_insertSideloadData">#</a>
+		<code><a href="source-class-RESTfulAPI_EmberDataSerializer.html#263-293" title="Go to source code">insertSideloadData</a>( <span>stdClass <var>$root</var></span>, <span>DataObject|DataList <var>$dataSource</var></span> )</code>
+
+		<div class="description short">
+			<p>Take a root object ready to be converted into JSON
+and an original data source (DataObject OR DataList)
+and insorts into the root object all relation records
+that should be sideloaded.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Take a root object ready to be converted into JSON
+and an original data source (DataObject OR DataList)
+and insorts into the root object all relation records
+that should be sideloaded.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$root</var></dt>
+					<dd>Root object ready to become JSON</dd>
+					<dt><var>$dataSource</var></dt>
+					<dd>The original data set from the root object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					stdClass<br>The updated root object sith the sideloaded data attached
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-RESTfulAPI_BasicSerializer.html#methods">RESTfulAPI_BasicSerializer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-RESTfulAPI_BasicSerializer.html#_formatDataList">formatDataList()</a>, 
+			<a href="class-RESTfulAPI_BasicSerializer.html#_formatDataObject">formatDataObject()</a>, 
+			<a href="class-RESTfulAPI_BasicSerializer.html#_getEmbedData">getEmbedData()</a>, 
+			<a href="class-RESTfulAPI_BasicSerializer.html#_getcontentType">getcontentType()</a>, 
+			<a href="class-RESTfulAPI_BasicSerializer.html#_isEmbeddable">isEmbeddable()</a>, 
+			<a href="class-RESTfulAPI_BasicSerializer.html#_jsonify">jsonify()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="contentType" id="$contentType">
+		<td class="attributes"><code>
+			private  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_EmberDataSerializer.html#17-23" title="Go to source code"><var>$contentType</var></a>
+
+			<div class="description short">
+				<p>Content-type header definition for this Serializer
+Used by RESTfulAPI in the response</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Content-type header definition for this Serializer
+Used by RESTfulAPI in the response</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$contentType" class="anchor">#</a>
+				<code><span class="php-quote">'application/vnd.api+json; charset=utf-8'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="sideloaded_records" id="$sideloaded_records">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_EmberDataSerializer.html#26-61" title="Go to source code"><var>$sideloaded_records</var></a>
+
+			<div class="description short">
+				<p>Sideloaded records settings
+Specify which relation's records will be added to the JSON root:
+'RequestedClass' => array('RelationNameToSideLoad', 'Another')</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Sideloaded records settings
+Specify which relation's records will be added to the JSON root:
+'RequestedClass' => array('RelationNameToSideLoad', 'Another')</p>
+
+<p>Non sideloaded response:
+{ 'member': { 'name': 'John', 'favourites': [1, 2] }
+}</p>
+
+<p>Response with sideloaded records:
+{ 'member': { 'name': 'John', 'favourites': [1, 2] },
+ favourites': [{ 'id': 1, 'name': 'Mark' },{ 'id': 2, 'name': 'Maggie' }]
+}</p>
+
+<p>Try not to use in conjunction with <code><a href="class-RESTfulAPI.html">RESTfulAPI</a></code> $embedded_records
+with the same settings.</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$sideloaded_records" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="sideloadedRecords" id="$sideloadedRecords">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_EmberDataSerializer.html#64-69" title="Go to source code"><var>$sideloadedRecords</var></a>
+
+			<div class="description short">
+				<p>Stores the current $sideloaded_records config</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Stores the current $sideloaded_records config</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$sideloadedRecords" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-RESTfulAPI_BasicSerializer.html#properties">RESTfulAPI_BasicSerializer</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-RESTfulAPI_BasicSerializer.html#$embeddedRecords"><var>$embeddedRecords</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

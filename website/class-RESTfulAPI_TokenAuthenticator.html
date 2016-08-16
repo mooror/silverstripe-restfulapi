@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class RESTfulAPI_TokenAuthenticator | SilverStripe RESTful API</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Packages</h3>
+			<ul>
+				<li>
+					<a href="package-Cake.html">
+						Cake<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-Cake.Utility.html">
+						Utility					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="package-RESTfulAPI.html">
+						RESTfulAPI<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-RESTfulAPI.Authentication.html">
+						Authentication					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Error.html">
+						Error					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Permission.html">
+						Permission					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.QueryHandler.html">
+						QueryHandler					</a>
+
+						</li>
+				<li>
+					<a href="package-RESTfulAPI.Serializer.html">
+						Serializer					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-RESTfulAPI_TokenAuthenticator.html">RESTfulAPI_TokenAuthenticator</a></li>
+				<li><a href="class-RESTfulAPI_TokenAuthExtension.html">RESTfulAPI_TokenAuthExtension</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-RESTfulAPI_Authenticator.html">RESTfulAPI_Authenticator</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class RESTfulAPI_TokenAuthenticator</h1>
+
+
+	<div class="description">
+	<p>RESTfulAPI Token authenticator
+handles login, logout and request authentication via token</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>RESTfulAPI_TokenAuthenticator</span></b>			
+			 implements 
+				<a href="class-RESTfulAPI_Authenticator.html"><span>RESTfulAPI_Authenticator</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-RESTfulAPI.html">RESTfulAPI</a>\<a href="package-RESTfulAPI.Authentication.html">Authentication</a><br>
+
+				<b>Copyright:</b>
+				Copyright (c) 2013, Thierry Francois<br>
+				<b>License:</b>
+				<a href="http://opensource.org/licenses/BSD-3-Clause">BSD Simplified</a><br>
+				<b>Author:</b>
+				Thierry Francois @colymba thierry@colymba.com<br>
+			<b>Located at</b> <a href="source-class-RESTfulAPI_TokenAuthenticator.html#2-521" title="Go to source code">authenticator/RESTfulAPI_TokenAuthenticator.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#93-124" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			<p>Instanciation + config aquisition</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Instanciation + config aquisition</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="login" id="_login">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_login">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#127-177" title="Go to source code">login</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Login a user into the Framework and generates API token
+Only works if the token owner is a Member</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Login a user into the Framework and generates API token
+Only works if the token owner is a Member</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request containing 'email' &amp; 'pwd' vars</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>login result with token
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logout" id="_logout">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_logout">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#180-236" title="Go to source code">logout</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Logout a user from framework
+and update token with an expired one
+if token owner class is a Member</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Logout a user from framework
+and update token with an expired one
+if token owner class is a Member</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request containing 'email' var</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lostPassword" id="_lostPassword">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lostPassword">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#239-264" title="Go to source code">lostPassword</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Sends password recovery email</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sends password recovery email</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP request containing 'email' vars</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>'email' => false if email fails (Member doesn't exist will not be reported)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getToken" id="_getToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#267-288" title="Go to source code">getToken</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Return the stored API token for a specific owner</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the stored API token for a specific owner</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID of the token owner</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>API token for the owner
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMemberToken" id="_getMemberToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMemberToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#291-317" title="Go to source code">getMemberToken</a>( <span>string <var>$email</var></span> )</code>
+
+		<div class="description short">
+			<p>Return the stored API token for a specific Member</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Return the stored API token for a specific Member</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>Email of the Member who owns the token</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>API token for the Member
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="resetToken" id="_resetToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_resetToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#320-350" title="Go to source code">resetToken</a>( <span>integer <var>$id</var></span>, <span>boolean <var>$expired</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Reset an owner's token
+if $expired is set to true the owner's will have a new invalidated/expired token</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Reset an owner's token
+if $expired is set to true the owner's will have a new invalidated/expired token</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>ID of the token owner</dd>
+					<dt><var>$expired</var></dt>
+					<dd>if true the token will be invalidated</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generateToken" id="_generateToken">
+
+		<td class="attributes"><code>
+			 private 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_generateToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#353-381" title="Go to source code">generateToken</a>( <span>boolean <var>$expired</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Generates an encrypted random token
+and an expiry date</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Generates an encrypted random token
+and an expiry date</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$expired</var></dt>
+					<dd>Set to true to generate an outdated token</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>token data array('token' => HASH, 'expire' => EXPIRY_DATE)
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOwner" id="_getOwner">
+
+		<td class="attributes"><code>
+			 public 
+
+			null|DataObject
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOwner">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#384-409" title="Go to source code">getOwner</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the DataObject related to the token
+that sent the authenticated request</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the DataObject related to the token
+that sent the authenticated request</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP API request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					null|DataObject<br>null if failed or the DataObject token owner related to the request
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_Authenticator.html#_getOwner">RESTfulAPI_Authenticator::getOwner()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRequestToken" id="_getRequestToken">
+
+		<td class="attributes"><code>
+			 public 
+
+			false|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRequestToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#410-429" title="Go to source code">getRequestToken</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Returns the token that was passed in the request</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the token that was passed in the request</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP API request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					false|string<br>false if no token was found or a string containing the token
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="authenticate" id="_authenticate">
+
+		<td class="attributes"><code>
+			 public 
+
+			true|<code><a href="class-RESTfulAPI_Error.html">RESTfulAPI_Error</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_authenticate">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#432-460" title="Go to source code">authenticate</a>( <span>SS_HTTPRequest <var>$request</var></span> )</code>
+
+		<div class="description short">
+			<p>Checks if a request to the API is authenticated
+Gets API Token from HTTP Request and return Auth result</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Checks if a request to the API is authenticated
+Gets API Token from HTTP Request and return Auth result</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd>HTTP API request</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					true|<code><a href="class-RESTfulAPI_Error.html">RESTfulAPI_Error</a></code><br>True if token is valid OR RESTfulAPI_Error with details
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-RESTfulAPI_Authenticator.html#_authenticate">RESTfulAPI_Authenticator::authenticate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateAPIToken" id="_validateAPIToken">
+
+		<td class="attributes"><code>
+			 private 
+
+			true|<code><a href="class-RESTfulAPI_Error.html">RESTfulAPI_Error</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateAPIToken">#</a>
+		<code><a href="source-class-RESTfulAPI_TokenAuthenticator.html#463-520" title="Go to source code">validateAPIToken</a>( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			<p>Validate the API token</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Validate the API token</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd>Authentication token</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					true|<code><a href="class-RESTfulAPI_Error.html">RESTfulAPI_Error</a></code><br>True if token is valid OR RESTfulAPI_Error with details
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="AUTH_CODE_LOGGED_IN" id="AUTH_CODE_LOGGED_IN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#73" title="Go to source code"><b>AUTH_CODE_LOGGED_IN</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_LOGGED_IN" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH_CODE_LOGIN_FAIL" id="AUTH_CODE_LOGIN_FAIL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#74" title="Go to source code"><b>AUTH_CODE_LOGIN_FAIL</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_LOGIN_FAIL" class="anchor">#</a>
+				<code><span class="php-num">1</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH_CODE_TOKEN_INVALID" id="AUTH_CODE_TOKEN_INVALID">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#75" title="Go to source code"><b>AUTH_CODE_TOKEN_INVALID</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_TOKEN_INVALID" class="anchor">#</a>
+				<code><span class="php-num">2</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH_CODE_TOKEN_EXPIRED" id="AUTH_CODE_TOKEN_EXPIRED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#76" title="Go to source code"><b>AUTH_CODE_TOKEN_EXPIRED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_TOKEN_EXPIRED" class="anchor">#</a>
+				<code><span class="php-num">3</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH_CODE_LOGOUT_FAIL" id="AUTH_CODE_LOGOUT_FAIL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#77" title="Go to source code"><b>AUTH_CODE_LOGOUT_FAIL</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_LOGOUT_FAIL" class="anchor">#</a>
+				<code><span class="php-num">4</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="AUTH_CODE_LOGOUT_SUCCESS" id="AUTH_CODE_LOGOUT_SUCCESS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#78" title="Go to source code"><b>AUTH_CODE_LOGOUT_SUCCESS</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#AUTH_CODE_LOGOUT_SUCCESS" class="anchor">#</a>
+				<code><span class="php-num">5</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="tokenLife" id="$tokenLife">
+		<td class="attributes"><code>
+			private static 
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#17-23" title="Go to source code"><var>$tokenLife</var></a>
+
+			<div class="description short">
+				<p>Authentication token life in seconds</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Authentication token life in seconds</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tokenLife" class="anchor">#</a>
+				<code><span class="php-num">10800</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tokenHeader" id="$tokenHeader">
+		<td class="attributes"><code>
+			private static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#26-32" title="Go to source code"><var>$tokenHeader</var></a>
+
+			<div class="description short">
+				<p>HTTP Header name storing authentication token</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>HTTP Header name storing authentication token</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tokenHeader" class="anchor">#</a>
+				<code><span class="php-quote">'X-Silverstripe-Apitoken'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tokenQueryVar" id="$tokenQueryVar">
+		<td class="attributes"><code>
+			private static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#35-41" title="Go to source code"><var>$tokenQueryVar</var></a>
+
+			<div class="description short">
+				<p>Fallback GET/POST HTTP query var storing authentication token</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Fallback GET/POST HTTP query var storing authentication token</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tokenQueryVar" class="anchor">#</a>
+				<code><span class="php-quote">'token'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tokenOwnerClass" id="$tokenOwnerClass">
+		<td class="attributes"><code>
+			private static 
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#44-50" title="Go to source code"><var>$tokenOwnerClass</var></a>
+
+			<div class="description short">
+				<p>Class name to query for token validation</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Class name to query for token validation</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tokenOwnerClass" class="anchor">#</a>
+				<code><span class="php-quote">'Member'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="autoRefreshLifetime" id="$autoRefreshLifetime">
+		<td class="attributes"><code>
+			private static 
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#53-61" title="Go to source code"><var>$autoRefreshLifetime</var></a>
+
+			<div class="description short">
+				<p>Whether or not the token should auto-update on activity.
+When set to true, the token will automatically update its lifetime, similar
+to a session-ping.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Whether or not the token should auto-update on activity.
+When set to true, the token will automatically update its lifetime, similar
+to a session-ping.</p>
+
+					<h4>Config</h4>
+					<div class="list">
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$autoRefreshLifetime" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tokenConfig" id="$tokenConfig">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#64-70" title="Go to source code"><var>$tokenConfig</var></a>
+
+			<div class="description short">
+				<p>Stores current token authentication configurations
+header, var, class, db columns....</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Stores current token authentication configurations
+header, var, class, db columns....</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tokenConfig" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="allowed_actions" id="$allowed_actions">
+		<td class="attributes"><code>
+			private static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-RESTfulAPI_TokenAuthenticator.html#81-90" title="Go to source code"><var>$allowed_actions</var></a>
+
+			<div class="description short">
+				<p>List of URL accessible actions</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>List of URL accessible actions</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$allowed_actions" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+<span class="php-quote">'login'</span>,
+<span class="php-quote">'logout'</span>,
+<span class="php-quote">'lostPassword'</span>
+  )</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		SilverStripe RESTful API API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

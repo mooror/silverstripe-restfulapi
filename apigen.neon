@@ -5,13 +5,13 @@
 source: code
 
 # Directory where to save the generated documentation
-destination: doc/api
+destination: website
 
 # List of allowed file extensions
 extensions: [php]
 
 # Character set of source files
-charset: auto
+# charset: auto
 
 # Main project name prefix
 main: SS_RESTfulAPI
@@ -23,10 +23,10 @@ title: SilverStripe RESTful API
 accessLevels: [private, public, protected]
 
 # Generate tree view of classes, interfaces and exceptions
-tree: No
+# tree: No
 
 # Add a link to download documentation as a ZIP archive
-download: No
+download: Yes
 
 # Wipe out the destination directory first
-wipeout: Yes
+# wipeout: Yes

@@ -1,0 +1,3 @@
+
+var ApiGen = ApiGen || {};
+ApiGen.elements = [["c","Inflector"],["c","RESTfulAPI"],["c","RESTfulAPI_Authenticator"],["c","RESTfulAPI_BasicDeSerializer"],["c","RESTfulAPI_BasicSerializer"],["c","RESTfulAPI_DefaultPermissionManager"],["c","RESTfulAPI_DefaultQueryHandler"],["c","RESTfulAPI_DeSerializer"],["c","RESTfulAPI_EmberDataDeSerializer"],["c","RESTfulAPI_EmberDataSerializer"],["c","RESTfulAPI_Error"],["c","RESTfulAPI_GroupExtension"],["c","RESTfulAPI_PermissionManager"],["c","RESTfulAPI_QueryHandler"],["c","RESTfulAPI_Serializer"],["c","RESTfulAPI_TokenAuthenticator"],["c","RESTfulAPI_TokenAuthExtension"]];
