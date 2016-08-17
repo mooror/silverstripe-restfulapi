@@ -299,7 +299,7 @@ Full-Width Styles
   padding: 50px 10px 30px 10px;
 }
 .top-banner{
-  padding: 5px 10px 30px;
+  padding: 2% 0;
   background:#0090ff;
 }
 .display-flex{
@@ -308,6 +308,9 @@ Full-Width Styles
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.top-banner h2{
+  color:#fff;
 }
 #chooseDownload{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
@@ -352,16 +355,16 @@ Full-Width Styles
 {
   color:#fff;
 }
-.top-banner h2{
-  color:#fff;
-}
 .top-bar-section{
   z-index: 10;
   background-color: #fff;
   border-radius:5px;
-  padding: 0 10px 10px;
+  padding: 0 10px;
   margin: 0 auto;
   height: 100%;
+}
+.top-bar-section h3{
+  margin-bottom: 10px;
 }
 .icon-downloads{
   background-image: url('../images/icon_download.png') no-repeat 0% 90%;
