@@ -331,8 +331,19 @@ Full-Width Styles
 #officialDownloads .top-bar-section{
   background-color:#2ecc71;
 }
+#officialDownloads .top-bar-section h3,#unofficialDownloads .top-bar-section h3{
+  color:#fff;
+  text-align: center;
+}
 #unofficialDownloads .top-bar-section{
   background-color:#9b59b6;
+}
+.download-link-container{
+  margin: 0 auto;
+  width:200px;
+}
+{
+  color:#fff;
 }
 .top-banner h2{
   color:#fff;
