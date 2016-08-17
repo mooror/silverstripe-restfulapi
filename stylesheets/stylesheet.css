@@ -430,6 +430,20 @@ Full-Width Styles
 #footer_wrap {
   background: #212121;
 }
+.slim-footer{
+  margin: 5px 20px;
+}
+.slim-footer p{
+  float: left;
+  width: 50%;
+  margin: 10px 0 12px;
+}
+.slim-footer .copyright{
+  text-align: left;
+}
+.slim-footer .published-with{
+  text-align: right;
+}
 
 
 
