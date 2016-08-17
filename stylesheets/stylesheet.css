@@ -312,11 +312,11 @@ Full-Width Styles
 #chooseDownload{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;               /* Firefox 19- */
-  width: 40%;                     /* For OLD syntax, otherwise collapses. */
+  width: 33.3333333333333%;                     /* For OLD syntax, otherwise collapses. */
   -ms-flex: 1;                    /* TWEENER - IE 10 */
   -webkit-flex: 1;                /* NEW - Chrome */
   flex: 1;             /* Without this, Firefox 19- expands to widest paragraph, overrides width */
-  padding:5%;
+  padding:1%;
   text-align:center;
 }
 #chooseDownload p{
@@ -329,7 +329,7 @@ Full-Width Styles
 #officialDownloads, #unofficialDownloads{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;               /* Firefox 19- */
-  width: 30%;                     /* For OLD syntax, otherwise collapses. */
+  width: 33.3333333333333%;                     /* For OLD syntax, otherwise collapses. */
   -ms-flex: 1;                    /* TWEENER - IE 10 */
   -webkit-flex: 1;                /* NEW - Chrome */
   flex: 1;                        /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -343,7 +343,7 @@ Full-Width Styles
   text-align: center;
 }
 #unofficialDownloads .top-bar-section{
-  background-color:#9b59b6;
+  background-color:#e74c3c;
 }
 .download-link-container{
   margin: 0 auto;
