@@ -319,6 +319,9 @@ Full-Width Styles
   padding:5%;
   text-align:center;
 }
+#chooseDownload p{
+  padding: 0;
+}
 #officialDownloads, #unofficialDownloads{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;               /* Firefox 19- */
