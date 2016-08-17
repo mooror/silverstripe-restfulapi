@@ -328,17 +328,10 @@ Full-Width Styles
   flex: 1;                        /* NEW, Spec - Opera 12.1, Firefox 20+ */
   padding:1%;
 }
-<<<<<<< HEAD
 #officialDownloads .top-bar-section{
   background-color:#2ecc71;
 }
 #unofficialDownloads .top-bar-section{
-=======
-#officialDownloads{
-  background-color:#2ecc71;
-}
-#unofficialDownloads{
->>>>>>> 5aa271f18df91f46e480011e62d65a96631869c8
   background-color:#9b59b6;
 }
 .top-banner h2{
