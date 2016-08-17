@@ -475,6 +475,7 @@ Medium Device Styles
     display: -ms-block;      /* TWEENER - IE 10 */
     display: -webkit-block;     /* NEW - Chrome */
     display: block;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    padding: 0 1%;
   }
   #officialDownloads,#unofficialDownloads{
     float:left;
