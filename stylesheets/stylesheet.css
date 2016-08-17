@@ -321,6 +321,7 @@ Full-Width Styles
 }
 #chooseDownload p{
   padding: 0;
+  margin: 0;
 }
 #officialDownloads, #unofficialDownloads{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
