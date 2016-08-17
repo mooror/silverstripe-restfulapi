@@ -301,7 +301,6 @@ Full-Width Styles
 .top-banner{
   padding: 5px 10px 30px;
   background:#0090ff;
-  color:#fff;
 }
 .display-flex{
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -311,13 +310,13 @@ Full-Width Styles
   display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 #chooseDownload{
-  width: 60%;                   /* No flex here, other cols take up remaining space */
+  width: 50%;                   /* No flex here, other cols take up remaining space */
   -moz-box-flex: 1;             /* Without this, Firefox 19- expands to widest paragraph, overrides width */
 }
 #officialDownloads, #unofficialDownloads{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;               /* Firefox 19- */
-  width: 20%;                     /* For OLD syntax, otherwise collapses. */
+  width: 25%;                     /* For OLD syntax, otherwise collapses. */
   -ms-flex: 1;                    /* TWEENER - IE 10 */
   -webkit-flex: 1;                /* NEW - Chrome */
   flex: 1;                        /* NEW, Spec - Opera 12.1, Firefox 20+ */
@@ -326,14 +325,15 @@ Full-Width Styles
   color:#fff;
 }
 .top-bar-section{
-  /*float: left;*/
   width: 210px;
   z-index: 10;
-  background: url('../images/icon_download.png') no-repeat 0% 90%;
   background-color: #fff;
   border-radius:5px;
   padding: 0 10px 10px;
   margin: 0 auto;
+}
+.icon-downloads{
+  background: url('../images/icon_download.png') no-repeat 0% 90%;
 }
 .clear{
   clear: both;
