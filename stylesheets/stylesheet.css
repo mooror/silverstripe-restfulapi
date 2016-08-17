@@ -317,6 +317,7 @@ Full-Width Styles
   -webkit-flex: 1;                /* NEW - Chrome */
   flex: 1;             /* Without this, Firefox 19- expands to widest paragraph, overrides width */
   padding:5%;
+  text-align:center;
 }
 #officialDownloads, #unofficialDownloads{
   -webkit-box-flex: 1;            /* OLD - iOS 6-, Safari 3.1-6 */
@@ -327,6 +328,12 @@ Full-Width Styles
   flex: 1;                        /* NEW, Spec - Opera 12.1, Firefox 20+ */
   padding:1%;
 }
+#officialDownloads{
+  background-color:#2ecc71;
+}
+#unofficialDownloads{
+  background-color:#9b59b6;
+}
 .top-banner h2{
   color:#fff;
 }
@@ -336,6 +343,7 @@ Full-Width Styles
   border-radius:5px;
   padding: 0 10px 10px;
   margin: 0 auto;
+  height: 100%;
 }
 .icon-downloads{
   background-image: url('../images/icon_download.png') no-repeat 0% 90%;
